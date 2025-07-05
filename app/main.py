@@ -15,11 +15,9 @@ load_dotenv()
 
 # ✅ Step 1: App instance
 tags_metadata = [
-    {"name": "Admin Panel", "description": "Admin and order management"},
     {"name": "Super Admin", "description": "Manage roles and user privileges"},
     {"name": "Authentication", "description": "User signup/login functionality"},
     {"name": "Recommendation", "description": "Phone recommendation engine"},
-    {"name": "Analytics", "description": "Recommendation & Order analytics for admin"},
 ]
 
 app = FastAPI(title="Smartphone Recommendation API", openapi_tags=tags_metadata)
@@ -57,7 +55,7 @@ app.include_router(payment_controller.router)
 app.include_router(notification_router)
 
 # ✅ Step 4.1: Static files (uploads)
-app.mount("/uploads", StaticFiles(directory="u ploads"), name="uploads")
+app.mount("/uploads", StaticFiles(directory="uploads"), name="uploads")
 
 # ✅ Step 5: DB Connection Test
 test_connection()

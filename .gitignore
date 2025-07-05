@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual Envs
+venv/
+env/
+
+# Environment Variables
+.env
+
+# Uploads and local images
+uploads/
+*.jpg
+*.png
+*.jpeg
+
+# IDEs
+.vscode/
+*.log
+
+# Alembic versions
+alembic/versions/
